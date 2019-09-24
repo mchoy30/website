@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import Header from './components/Header';
-import createBrowserHistory from 'history/createBrowserHistory';
+import Resume from './components/Resume';
+import { createBrowserHistory } from "history";
 import {Router, Switch, Route} from 'react-router-dom';
 
 
@@ -13,6 +14,7 @@ ReactDOM.render(
 
     <Switch>
       <Route exact path ='/' render={()=><Header><App /></Header>} />
+      <Route path ='/resume' render={()=><Header><Resume /></Header>} />
     </Switch>
   </Router>, document.getElementById('root')
 );
