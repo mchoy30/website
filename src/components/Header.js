@@ -9,13 +9,15 @@ const Header = ({children}) => {
   };
 
   return(
-    <div style={{position:'', height:'10px', width:'100vw', marginBottom:'20px',maxWidth:'100%'}}>
+    <div style={{position:'', height:'100%', width:'100vw', marginBottom:'0px',maxWidth:'100%'}}>
       <div style={{display:'flex', flexDirection:'row',justifyContent: 'flex-end',backgroundColor:'#0288D1'}}>
         <h3 style={style}><NavLink activeStyle={Hover} to='/'>About</NavLink></h3>
         <h3 style={style}><NavLink style={Hover} to='/resume'>Resume</NavLink></h3>
-        <h3 style={style}><NavLink style={Hover} to='/projects'>Projects</NavLink></h3>
+        <h3 style={style}><NavLink style={Hover} to='/projects'>The List</NavLink></h3>
       </div>
-      {children}
+      <div style={{height:'100%', paddingBottom:'0px', marginBottom:'0px'}}>
+         {children}
+      </div>
     </div>
   )
 
