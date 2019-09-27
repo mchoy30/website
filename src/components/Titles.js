@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import './Title.css'
 const TITLES = [
-  'a graduate from Red River BIT program',
-  'a guitarist',
-  'an enthusiastic learner',
-  'a salsa dancer'
+  'I am a graduate from Red River BIT program',
+  'I am an enthusiastic learner',
+  'I built this website using React.js',
+  'I love to cook!',
+
 ];
 
 
@@ -12,7 +13,6 @@ export default ()=>{
 
   const [titleIndex, setTitleIndex] = useState(0);
   const [fadeIn, setFadein] = useState(true);
-  const [intervalId, setIntervalId] = useState(null);
   const [time, setTime] = useState(0);
 
   useEffect(()=>{
@@ -21,7 +21,7 @@ export default ()=>{
       setTitleIndex(((titleIndex + 1) % TITLES.length));
       setFadein(true);
       setTime(()=>{setTimeout(()=> setFadein(false), 2000);})
-    },4000)
+    },4000);
 
     return function cleanUp(){
       clearTimeout(startTimer);
@@ -33,7 +33,7 @@ export default ()=>{
 
    const title = TITLES[titleIndex];
   return(
-    <p className={fadeIn ? 'title-fade-in' : 'title-fade-out'}>I am {title}</p>
+    <p className={fadeIn ? 'title-fade-in' : 'title-fade-out'}>{title}</p>
   )
 }
 
