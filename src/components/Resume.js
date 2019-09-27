@@ -36,7 +36,7 @@ class Resume extends Component {
     const { pageNumber, numPages } = this.state;
 
     return (
-      <div style={{backgroundColor:'#808080'}}>
+      <div style={{display:'flex', justifyContent:'center', backgroundColor:'#03A9F4'}}>
           <Container>
             <Grid centered columns={5}>
               <Grid.Column textAlign="center" onClick={this.nextPage}>
@@ -47,15 +47,19 @@ class Resume extends Component {
                           noData={<h4>Please select a file</h4>}
                           scale="2">
                   <Page pageNumber={pageNumber}
-                        height={2000} />
+                        height={1000} />
                 </Document>
 
-                {this.state.file ? <p>Page {pageNumber} of {numPages}</p> : null}
+                {!this.state.file ?
+                    <div>
+                      <p style={{fontFamily:'Segoe UI', color:'white'}}>Page {pageNumber} of {numPages}</p>
+                    </div>
+                : null}
               </Grid.Column>
             </Grid>
           </Container>
 
-          <div className={hidden}></div>
+
       </div>
 
     );
