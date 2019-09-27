@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/website/static/css/main.965f39cc.chunk.css",
+    "main.js": "/website/static/js/main.483bc8c7.chunk.js",
+    "main.js.map": "/website/static/js/main.483bc8c7.chunk.js.map",
+    "runtime-main.js": "/website/static/js/runtime-main.1f1b1c07.js",
+    "runtime-main.js.map": "/website/static/js/runtime-main.1f1b1c07.js.map",
+    "static/js/2.c469c894.chunk.js": "/website/static/js/2.c469c894.chunk.js",
+    "static/js/2.c469c894.chunk.js.map": "/website/static/js/2.c469c894.chunk.js.map",
+    "index.html": "/website/index.html",
+    "precache-manifest.caafc3390ff17b3585752fffe1f0885f.js": "/website/precache-manifest.caafc3390ff17b3585752fffe1f0885f.js",
+    "service-worker.js": "/website/service-worker.js",
+    "static/css/main.965f39cc.chunk.css.map": "/website/static/css/main.965f39cc.chunk.css.map",
+    "static/media/Resume.pdf": "/website/static/media/Resume.f9580886.pdf",
+    "static/media/phone.png": "/website/static/media/phone.140a8c8a.png"
+  }
+}
