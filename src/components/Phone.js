@@ -1,24 +1,21 @@
 import React from 'react';
 import Iframe from 'react-iframe'
-import phone from '../assets/phone.png'
-
-
-
+import phone from '../assets/phone.png';
+import './Phone.css';
 export default ()=>{
   return(
-    <div style={{display:'flex',flexDirection:'column' }}>
-      <img src={phone} alt="phone" style={{position:'absolute',zIndex:'1',justifyContent:'flex-end', right:'5px', height:'850px',width:'auto'}}/>
-      <div style={{zIndex:'2',margin:'0px',padding:'0px',display:'flex', position:'relative', top:'132px',right:'270px', justifyContent:'flex-end',flexDirection:'row' }}>
-          <Iframe
-            url="https://kat-mac-react.herokuapp.com"
-            width="320px"
-            height="565px"
-            display="initial"
-            overflow="hidden"
-            frameborder="0"
-            styles={{borderStyle:'1px solid red',}}
-            />
-        </div>
-    </div>
+
+      <div style={{display:'inline-block',flexDirection:'column',}}>
+        <img src={phone} alt="phone" style={{zIndex:'1', width:'auto', height:'800px',}}/>
+        <div className="holds-the-iframe" style={{zIndex:'2',marginLeft:'45px',position:'absolute', left:'200px',top:'105px',padding:'0px',marginBottom:'0',display:'inline-block',}}>
+            <Iframe
+              url="https://kat-mac-react.herokuapp.com"
+              width="305px"
+              height="555px"
+              display="initial"
+              loading={()=>{return(<div style={{position:'absolute',color:'red', display:'flex', top:'90px', right:'100px'}}><h2>Loading</h2></div>)}}
+              />
+          </div>
+      </div>
   )
 }
