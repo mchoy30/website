@@ -1,7 +1,6 @@
 import React , {useState, useEffect} from 'react';
 import '../About.css';
 import Titles from './Titles';
-import Winnipeg from '../assets/Winnipeg.png';
 import Button from '@material-ui/core/Button';
 export default function(){
 
@@ -9,12 +8,10 @@ export default function(){
   const [option, setOption] = useState('more');
 
   useEffect(()=>{
-
-
     setOption('more');
     if(showBio) setOption('less');
-
   });
+
   return(
     <div style={{display:'flex',justifyContent:'center',backgroundColor:'#03A9F4', height:'100%', width:'100vw',maxWidth:'100%',margin:0, padding:0,fontFamily:'Segoe UI'}}>
         <div style={{display:'flex',flexDirection:'column',height:'100vh'}}>
@@ -25,13 +22,6 @@ export default function(){
             <Titles />
         </div>
 
-        <div style={{
-           position:'relative',
-           display:'flex',
-           backgroundColor:'black',
-           borderStyle:'1px solid black'
-        }}>
-        </div>
 
         <div style={{
                         position:'relative',
@@ -60,22 +50,18 @@ export default function(){
                     flexDirection:'column',
                     alignItems:'flex-start',
                     width:'30vw',
-                    top:'200px',
+                    top:'300px',
                     left:'50px',
-                    height:'20vh',
-                    bottom:'0px',
+                    height:'100%',
                     }}>
-          <h3>About me!</h3>
+          <h1>About me!</h1>
           <p>
-              {showBio ? <div>
+              {showBio ? <div style={{}}>
                 I am a 24 year old BIT graduate born I have tons of hobbies that I love! One of my biggest interests would have to be music. I have always been someone who will try to learn something by themselves through trial and error. At the age of 15 I started to learn how to play guitar to get girls . . . well that didn’t work but I still play guitar to this day and have been recently learning more about musical theory to understand why the things I play work. Another one of my big passions is cooking. I
               </div> : <div>I am a 24 year old BIT graduate born I have tons of hobbies that I love! One of my biggest interests would have to be music.</div>}
           </p>
-          <Button style={{display:'flex', justifyItems:'center', color:"#FFEB3B"}} onClick={()=>{setShowBio(!showBio)}} className="Primary"> Show {option} </Button>
-
+          <Button style={{display:'flex', alignItems:'center', color:"#FFEB3B"}} onClick={()=>{setShowBio(!showBio)}} className="Primary"> Show {option} </Button>
       </div>
-
-
     </div>
   )
 }
