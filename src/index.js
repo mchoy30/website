@@ -6,17 +6,31 @@ import Resume from './components/Resume';
 import { createBrowserHistory } from "history";
 import {Router, Switch, Route, HashRouter} from 'react-router-dom';
 import About from './components/About';
+import UseScreeenSize from './Hooks/UseScreenSize';
+import {ScreenProvider} from './Context/ScreenContext';
+import useScreenSize from './Hooks/UseScreenSize';
 
+const Website = ()=>{
+ const [screenSize] = useScreenSize();
+ return(
+
+  <ScreenProvider value={screenSize}>
+      <HashRouter basename='/' history={createBrowserHistory()}>
+          <Header />
+          <div style={{position:'absolute', top:'50px', backgroundColor:'#03A9F4', minHeight:'100vh' }}>
+            <Switch>
+              <Route exact path ='/' render={()=><About />} />
+              <Route path ='/resume' render={()=><Resume />} />
+              <Route path ='/projects' render={()=><Projects />} />
+            </Switch>
+          </div>
+        </HashRouter>
+    </ScreenProvider>
+ )
+}
 
 ReactDOM.render(
-  <HashRouter basename='/' history={createBrowserHistory()}>
-
-    <Switch>
-      <Route exact path ='/' render={()=><Header><About /></Header>} />
-      <Route path ='/resume' render={()=><Header><Resume /></Header>} />
-      <Route path ='/projects' render={()=><Header><Projects /></Header>} />
-    </Switch>
-  </HashRouter>, document.getElementById('root')
+   <Website/>,document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
