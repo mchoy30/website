@@ -16,19 +16,25 @@ export default ()=>{
   const [time, setTime] = useState(0);
 
   useEffect(()=>{
+    const abortConroller = new AbortController();
+    const signal = abortConroller.signal;
     let startTimer = setTimeout(()=> setFadein(false), 2000);
     let interval = setInterval(()=>{
       setTitleIndex(((titleIndex + 1) % TITLES.length));
       setFadein(true);
-      setTime(()=>{setTimeout(()=> setFadein(false), 2000);})
+      setTime(()=>{ setTimeout(()=> setFadein(false), 2000);})
     },4000);
 
     return function cleanUp(){
+      abortConroller.abort();
       clearTimeout(startTimer);
       clearInterval(interval);
       clearTimeout(time);
+      clearTimeout(interval);
     }
   },[titleIndex])
+
+
 
 
    const title = TITLES[titleIndex];
