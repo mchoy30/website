@@ -1,11 +1,13 @@
 import React ,{Component} from 'react';
+import 'react-pdf/dist/Page/AnnotationLayer.css';
 import { Container,Grid } from 'semantic-ui-react';
 import { Document, Page } from 'react-pdf';
 import { pdfjs } from 'react-pdf';
-import PDF from '../assets/Resume.pdf'
+import PDF from '../assets/PDF.pdf'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
+pdfjs.externalLinkTarget = pdfjs.LinkTarget.BLANK;
 class Resume extends Component {
   state = {
     file: null,
@@ -36,18 +38,19 @@ class Resume extends Component {
     const { pageNumber, numPages } = this.state;
 
     return (
-      <div style={{display:'flex', justifyContent:'center', backgroundColor:'#03A9F4'}}>
+      <div style={{display:'flex', justifyContent:'center', backgroundColor:'#03A9F4',width:'100vw'}}>
           <Container>
-            <Grid centered columns={5}>
+            <Grid centered columns={3}>
               <Grid.Column textAlign="center" onClick={this.nextPage}>
                 <Document
                           style={{boxShadow:' 10px 10px 5px grey'}}
                           file={PDF}
                           onLoadSuccess={this.onDocumentLoadSuccess}
-                          noData={<h4>Please select a file</h4>}
-                          scale="2">
-                  <Page pageNumber={pageNumber}
-                        height={1000} />
+                          scale="2"
+                >
+                  <Page
+                          pageNumber={pageNumber}
+                  />
                 </Document>
 
                 {!this.state.file ?
