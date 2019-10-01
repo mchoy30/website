@@ -9,23 +9,30 @@ import About from './components/About';
 import UseScreeenSize from './Hooks/UseScreenSize';
 import {ScreenProvider} from './Context/ScreenContext';
 import useScreenSize from './Hooks/UseScreenSize';
-
+import Footer from './components/Footer';
 const Website = ()=>{
  const [screenSize] = useScreenSize();
  return(
 
   <ScreenProvider value={screenSize}>
       <HashRouter basename='/' history={createBrowserHistory()}>
-          <Header />
+
+
+      <Header />
           <div style={{position:'absolute', top:'50px', backgroundColor:'#03A9F4', minHeight:'100vh' }}>
+
             <Switch>
               <Route exact path ='/' render={()=><About />} />
               <Route path ='/resume' render={()=><Resume />} />
               <Route path ='/projects' render={()=><Projects />} />
             </Switch>
+            <Footer />
           </div>
+
         </HashRouter>
+
     </ScreenProvider>
+
  )
 }
 
