@@ -2,7 +2,6 @@ import React , {useState, useEffect} from 'react';
 import '../About.css';
 import Titles from './Titles';
 import Button from '@material-ui/core/Button';
-
 export default function(){
 
   const [showBio, setShowBio] = useState(false);
@@ -14,15 +13,16 @@ export default function(){
   });
 
   return(
-    <div style={{display:'flex',justifyContent:'center', width:'100vw',maxWidth:'100%',minHeight: '100vh', margin:0, padding:0,fontFamily:'Segoe UI'}}>
+    <div style={{display:'flex',justifyContent:'center',minHeight: '100vh', margin:0, padding:0,fontFamily:'Segoe UI',}}>
         <div style={{display:'flex',flexDirection:'column',}}>
             <h1
                 className="tracking-in-expand"
-                style={{ fontFamily:'Segoe UI', fontSize:'3.5vw', color:'#fff',}}
+                style={{ fontFamily:'Segoe UI', fontSize:'3.5vw', color:'#fff', position:'relative', right:'80px'}}
             >
                 Hello!
             </h1>
-            <div style={{ alignItems:'flex-start',marginBottom:'100px',right:'200px',}}>
+
+            <div style={{marginBottom:'100px',position:'relative', right:'80px',width:'200px', height:'50px'}}>
                 <Titles />
             </div>
         <div style={{

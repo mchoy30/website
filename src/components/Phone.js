@@ -12,7 +12,7 @@ export default ()=>{
         }}
 
       >
-        <img src={phone} alt="phone" style={{zIndex:'1', width:'auto', height:'800px',}}/>
+        <img src={phone} alt="phone" style={{zIndex:'1',height:'800px',}}/>
         <div className="holds-the-iframe" style={{zIndex:'2',marginLeft:'45px',position:'absolute', left:'200px',top:'105px',padding:'0px',marginBottom:'0',display:'inline-block',}}>
             <Iframe
               url="https://kat-mac-react.herokuapp.com"
