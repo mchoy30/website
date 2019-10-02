@@ -9,10 +9,10 @@ export default () =>{
   }
 
   return(
-      <div style={{backgroundColor:'#03A9F4',position:'relative',height:'100vh',display:'flex', flexDirection:{},fontFamily:'Segoe UI',overflow:'hidden', width:'100vw'}}>
+      <div style={{backgroundColor:'#03A9F4',position:'relative',height:'100vh',display:'flex',fontFamily:'Segoe UI',overflow:'hidden',}}>
 
 
-          <div className="slide-in-bottom" style={{width:'700px',marginTop:'50px',marginBottom:'80px',marginLeft:'200px', zIndex:'3', position:'flex', top:'20px', }}>
+          <div className="slide-in-bottom" style={{width:'700px',paddingTop:'50px',marginBottom:'80px',paddingLeft:'200px', zIndex:'3', position:'flex', top:'20px', }}>
               <div style={style}>
                 <h1>Current Project<span style={{color:'#FFEB3B', fontSize:'12'}}> .</span></h1>
                 <p>"The list” is an app for keeping track of my friend and I’s plans that we want to do but together so we would always say we would ”Add it to the list!”. <br/>
