@@ -9,15 +9,16 @@ export default () =>{
   }
 
   return(
-      <div style={{backgroundColor:'#03A9F4',position:'relative',height:'100vh',display:'flex',fontFamily:'Segoe UI',overflow:'hidden',}}>
+      <div style={{backgroundColor:'#03A9F4',position:'relative',height:'100vh',display:'flex',fontFamily:'Segoe UI',overflow:'auto',}}>
 
 
           <div className="slide-in-bottom" style={{width:'700px',paddingTop:'50px',marginBottom:'80px',paddingLeft:'200px', zIndex:'3', position:'flex', top:'20px', }}>
               <div style={style}>
                 <h1>Current Project<span style={{color:'#FFEB3B', fontSize:'12'}}> .</span></h1>
-                <p>"The list” is an app for keeping track of my friend and I’s plans that we want to do but together so we would always say we would ”Add it to the list!”. <br/>
+                <p>"The list” is an app for keeping track of my friend and I’s plans that we want to do together. We would always say we would ”Add it to the list!”. <br/>
                     I decided to use this as a learning opportunity for the React JavaScript framework. Along with helping me learn React, I have started to learn about other technologies such as Node.JS, Express and MongoDb. The current version of this app is hosted on Heroku with future plans and projects in store!
-                </p>
+                </p><br/>
+                <a href="https://kat-mac-react.herokuapp.com/" rel="noopener noreferrer" target='_blank'>Check out here! or wait for the app to load </a>
               </div>
 
               <div style={style}>
