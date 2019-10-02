@@ -3,7 +3,7 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 import { Container,Grid } from 'semantic-ui-react';
 import { Document, Page } from 'react-pdf';
 import { pdfjs } from 'react-pdf';
-import PDF from '../assets/PDF.pdf'
+import PDF from '../assets/Resume.pdf'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
