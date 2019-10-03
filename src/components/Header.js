@@ -6,19 +6,14 @@ const Header = () => {
   const screenSize = useContext(ScreenContext);
   const style = {
     margin:'20px',
-    padding:'0px',
-    position:'relative',
-    bottom:'8px',
-
-
   };
 
   return(
     <div style={{marginBottom:'0px', postition:'fixed'}}>
 
       <div style={{display:'flex', flexDirection:'row',justifyContent: 'flex-end',backgroundColor: screenSize.medium ? '#0288D1' : '#0288D1'}}>
-        <div style={{display:'flex',color:'#fff',justifyContent: 'center', fontFamily:'Satisfy, cursive',width:'50%',position:'relative',right:'166px',}}>
-          <h3 style={{fontSize:'30px',}}  > Mackenzie Choy</h3>
+        <div style={{display:'flex',color:'#fff',alignItems: 'center',justifyContent: 'center', fontFamily:'Satisfy, cursive',width:'50%',position:'relative',right:'166px',}}>
+          <h3 style={{fontSize:'30px',display:'flex',}}  > Mackenzie Choy</h3>
         </div>
 
         <h3 style={style}><NavLink activeStyle={Hover} to='/'>About</NavLink></h3>
