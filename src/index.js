@@ -19,7 +19,7 @@ const Website = ()=>{
 
 
       <Header />
-          <div style={{ top:'50px', backgroundColor:'#03A9F4', minHeight:'100vh', width:'100%' }}>
+          <div style={{ top:'50px', backgroundColor:'#03A9F4', width:'100%' }}>
 
             <Switch>
               <Route exact path ='/' render={()=><About />} />
