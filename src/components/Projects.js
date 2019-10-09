@@ -1,21 +1,28 @@
-import React from 'react';
+import React , {useContext} from 'react';
 import Phone from './Phone';
+import ScreenContext from '../Context/ScreenContext';
+
+
 import '../Projects.css';
+
 export default () =>{
+ const screenSize = useContext(ScreenContext);
 
   const style={
     marginBottom:'50px',
     color:'#212121',
   }
 
+
+
   return(
-      <div style={{backgroundColor:'#03A9F4',position:'relative',height:'100vh',display:'flex',fontFamily:'Segoe UI',overflow:'auto',}}>
+      <div style={{display:'flex',fontFamily:'Segoe UI',overflow:'hidden', }}>
 
-
-          <div className="slide-in-bottom" style={{width:'700px',paddingTop:'50px',marginBottom:'80px',paddingLeft:'200px', zIndex:'3', position:'flex', top:'20px', }}>
+      <div style={{ display:'flex',flexDirection: screenSize.large ? 'column' : 'row'}}>
+          <div className="slide-in-bottom" style={{paddingTop:'50px',marginBottom:'80px',paddingLeft:screenSize.large ?  '100px': '200px', width:'80%', position:'flex', top:'20px', }}>
               <div style={style}>
                 <h1>Current Project<span style={{color:'#FFEB3B', fontSize:'12'}}> .</span></h1>
-                <p>"The list” is an app for keeping track of my friend and I’s plans that we want to do together. We would always say we would ”Add it to the list!”. <br/>
+                <p>"The list” is an app for keeping track of my friend and I’s plans that we want to do together. We would always say we would ”Add it to the list!”. <br/><br/>
                     I decided to use this as a learning opportunity for the React JavaScript framework. Along with helping me learn React, I have started to learn about other technologies such as Node.JS, Express and MongoDb. The current version of this app is hosted on Heroku with future plans and projects in store!
                 </p><br/>
                 <a href="https://kat-mac-react.herokuapp.com/" rel="noopener noreferrer" target='_blank'>Check out here! or wait for the app to load </a>
@@ -35,10 +42,12 @@ export default () =>{
           </div>
 
           <div style={{display:'flex', width:'40%'}}>
-            <div className="slide-in-right"  style={{zIndex:'2',disply:'flex',alignContent:'flex-start',  right:'200px',}}>
+            <div className="slide-in-right"  style={{disply:'flex',alignContent:'flex-end',  right:'200px',}}>
               <Phone />
             </div>
           </div>
+      </div>
+
       </div>
   )
 
