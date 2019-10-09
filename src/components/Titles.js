@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef, Component} from 'react';
 import './Title.css'
 const TITLES = [
   'I am a graduate from Red River BIT program',
@@ -8,38 +8,39 @@ const TITLES = [
 
 ];
 
+class Title extends Component {
+  state = {titleIndex: 0, fadeIn: true}
 
-export default ()=>{
+  componentDidMount(){
+    this.setTimeout = setTimeout(()=> this.setState({ fadeIn:false }), 2000);
+    this.animateTitles();
+  }
 
-  const [titleIndex, setTitleIndex] = useState(0);
-  const [fadeIn, setFadein] = useState(true);
-  const [time, setTime] = useState(0);
+  animateTitles = () => {
+   this.titleInterval = setInterval(() => {
+      const titleIndex = (this.state.titleIndex + 1) % TITLES.length;
 
-  useEffect(()=>{
-    const abortConroller = new AbortController();
-    const signal = abortConroller.signal;
-    let startTimer = setTimeout(()=> setFadein(false), 2000);
-    let interval = setInterval(()=>{
-      setTitleIndex(((titleIndex + 1) % TITLES.length));
-      setFadein(true);
-      setTime(()=>{ setTimeout(()=> setFadein(false), 2000);})
-    },4000);
+      this.setState({titleIndex, fadeIn:true});
+      this.setTimeout = setTimeout(()=> this.setState({ fadeIn:false }), 2000);
 
-    return function cleanUp(){
-      abortConroller.abort();
-      clearTimeout(startTimer);
-      clearInterval(interval);
-      clearTimeout(time);
-      clearTimeout(interval);
-    }
-  },[titleIndex])
+    }, 4000)
+  }
 
+  componentWillUnmount = () => {
+    clearInterval(this.titleInterval);
+    clearTimeout(this.setTimeout);
+  }
+  render() {
+
+    const {fadeIn, titleIndex} = this.state
+    const title = TITLES[titleIndex]
 
 
-
-   const title = TITLES[titleIndex];
-  return(
-    <p className={fadeIn ? 'title-fade-in' : 'title-fade-out'}>{title}</p>
-  )
+    return (
+      <p className={fadeIn ? 'title-fade-in' : 'title-fade-out'}>{title}</p>
+    )
+  }
 }
+
+export default Title;
 
