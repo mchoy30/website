@@ -24,8 +24,8 @@ export default ()=>{
 
   const AnimateIcons = () => {
     return(
-        <div style={{position:'relative', width:'300px',left:'500px', bottom:'250px', display:`${text}`}}>
-            <div style={{display:'flex', flexDirection:'column', justifyContent:'flex-end', fontSize:'90px',position:'relative',height:'0px' }}>
+        <div style={{position:'relative', width:'300px', bottom:'250px', display:`${text}`}}>
+            <div style={{display:'flex', flexDirection:'row', justifyContent:'flex-end', fontSize:'90px',position:'relative',height:'0px' }}>
               <div
                    className="wobble-hor-top"
                    style={style}
@@ -74,11 +74,9 @@ export default ()=>{
               width="305px"
               height="555px"
               display="initial"
-              />
-
-
-          </div>
-           <AnimateIcons />
+            />
+        </div>
+           {/* <AnimateIcons /> */}
       </div>
   )
 }
