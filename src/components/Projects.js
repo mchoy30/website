@@ -19,12 +19,12 @@ export default () =>{
       <div style={{display:'flex',fontFamily:'Segoe UI',overflow:'hidden', }}>
 
       <div style={{ display:'flex',flexDirection: screenSize.large ? 'column' : 'row'}}>
-          <div className="slide-in-bottom" style={{paddingTop:'50px',marginBottom:'80px',paddingLeft:screenSize.large ?  '100px': '200px', width:'80%', position:'flex', top:'20px', }}>
+          <div className="slide-in-bottom" style={{paddingTop:'70px',marginBottom:'80px',paddingLeft:screenSize.large ?  '100px': '200px', width:'80%', position:'flex', top:'20px', }}>
               <div style={style}>
                 <h1>Current Project<span style={{color:'#FFEB3B', fontSize:'12'}}> .</span></h1>
                 <p>"The list” is an app for keeping track of my friend and I’s plans that we want to do together. We would always say we would ”Add it to the list!”. <br/><br/>
                     I decided to use this as a learning opportunity for the React JavaScript framework. Along with helping me learn React, I have started to learn about other technologies such as Node.JS, Express and MongoDb. The current version of this app is hosted on Heroku with future plans and projects in store!
-                </p><br/>
+                </p>
               </div>
 
               <div style={style}>
