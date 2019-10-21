@@ -38,7 +38,7 @@ class Resume extends Component {
     const { pageNumber, numPages } = this.state;
 
     return (
-      <div style={{display:'flex', justifyContent:'center', backgroundColor:'#03A9F4',marginTop:'40px'}}>
+      <div style={{display:'flex', justifyContent:'center', backgroundColor:'#03A9F4',marginTop:'40px', paddingBottom:'50px'}}>
           <Container>
             <Grid centered columns={3}>
               <Grid.Column textAlign="center" onClick={this.nextPage}>

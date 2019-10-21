@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef, Component} from 'react';
-import './Title.css'
+import '../styles/Title.css'
 const TITLES = [
   'I am a graduate from Red River BIT program',
   'I am an enthusiastic learner',

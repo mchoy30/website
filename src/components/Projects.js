@@ -3,7 +3,7 @@ import Phone from './Phone';
 import ScreenContext from '../Context/ScreenContext';
 
 
-import '../Projects.css';
+import '../styles/Projects.css';
 
 export default () =>{
  const screenSize = useContext(ScreenContext);

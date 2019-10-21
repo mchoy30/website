@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Iframe from 'react-iframe'
 import phone from '../assets/phone.png';
-import './Phone.css';
-import './Icons.css'
+import '../styles/Phone.css';
+import '../styles/Icons.css'
 import {DiReact, DiNodejsSmall, DiMongodb, DiHeroku } from "react-icons/di";
 export default ()=>{
 

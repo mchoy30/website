@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import Projects from './components/Projects';
 import Header from './components/Header';
 import Resume from './components/Resume';
-import { createBrowserHistory } from "history";
-import {Router, Switch, Route, HashRouter} from 'react-router-dom';
+import {Switch, Route, HashRouter } from 'react-router-dom';
 import About from './components/About';
 import UseScreeenSize from './Hooks/UseScreenSize';
 import {ScreenProvider} from './Context/ScreenContext';
@@ -15,7 +14,7 @@ const Website = ()=>{
  return(
 
   <ScreenProvider value={screenSize}>
-      <HashRouter basename='/' history={createBrowserHistory()}>
+      <HashRouter basename='/' history={React} >
 
 
       <Header />

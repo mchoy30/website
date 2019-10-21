@@ -1,6 +1,6 @@
 import React , {useState, useEffect, useContext} from 'react';
 import ScreenContext from '../Context/ScreenContext';
-import '../About.css';
+import '../styles/About.css'
 import Titles from './Titles';
 import Button from '@material-ui/core/Button';
 import Showcase from './Showcase';
