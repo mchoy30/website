@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.e88dbf64.chunk.css",
-    "main.js": "/static/js/main.ae22a779.chunk.js",
-    "main.js.map": "/static/js/main.ae22a779.chunk.js.map",
+    "main.css": "/static/css/main.b0b1607b.chunk.css",
+    "main.js": "/static/js/main.b2fbebb6.chunk.js",
+    "main.js.map": "/static/js/main.b2fbebb6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.105f67c5.js",
     "runtime-main.js.map": "/static/js/runtime-main.105f67c5.js.map",
     "static/css/2.c83c8d54.chunk.css": "/static/css/2.c83c8d54.chunk.css",
-    "static/js/2.c1422548.chunk.js": "/static/js/2.c1422548.chunk.js",
-    "static/js/2.c1422548.chunk.js.map": "/static/js/2.c1422548.chunk.js.map",
+    "static/js/2.80fefb50.chunk.js": "/static/js/2.80fefb50.chunk.js",
+    "static/js/2.80fefb50.chunk.js.map": "/static/js/2.80fefb50.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.bdf6856e59cc0b0e3e3ed42cf6d44078.js": "/precache-manifest.bdf6856e59cc0b0e3e3ed42cf6d44078.js",
+    "precache-manifest.5841a38381b7d7ae1fd59240ac4435c9.js": "/precache-manifest.5841a38381b7d7ae1fd59240ac4435c9.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.c83c8d54.chunk.css.map": "/static/css/2.c83c8d54.chunk.css.map",
-    "static/css/main.e88dbf64.chunk.css.map": "/static/css/main.e88dbf64.chunk.css.map",
+    "static/css/main.b0b1607b.chunk.css.map": "/static/css/main.b0b1607b.chunk.css.map",
     "static/media/ES6.jpg": "/static/media/ES6.830a4a93.jpg",
     "static/media/JSWeird.jpg": "/static/media/JSWeird.e67efdc7.jpg",
     "static/media/ReactBootCamp.jpg": "/static/media/ReactBootCamp.c0348908.jpg",
     "static/media/Resume.pdf": "/static/media/Resume.7f20e0e7.pdf",
     "static/media/email_icon.png": "/static/media/email_icon.fd99f8e3.png",
     "static/media/github_icon.png": "/static/media/github_icon.e2a62886.png",
+    "static/media/linkedin_icon.png": "/static/media/linkedin_icon.56ab00e8.png",
     "static/media/phone.png": "/static/media/phone.140a8c8a.png"
   }
 }
