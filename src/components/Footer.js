@@ -23,7 +23,7 @@ const SocialProfile = props =>{
             return <SocialProfile key={SOCIAL_PROFILE.id} SocialProfile={SOCIAL_PROFILE}/>
           })
         }
-        <h3 style={{fontFamily:'Segoe UI'}}>Connect with me!</h3>
+
       </div>
     )
   }
